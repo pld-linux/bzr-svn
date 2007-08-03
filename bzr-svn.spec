@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Wtyczka do Bazaar-NG umożliwiająca dostęp do repozytorium 
 Name:		bzr-svn
 Version:	0.3.5
 Release:	1
-License:	GPL v2
+License:	GPL v2+
 Group:		Development/Version Control
 Source0:	http://samba.org/~jelmer/bzr/%{name}-%{version}.tar.gz
 # Source0-md5:	78ed3f127c578c2810e38d8373a29ca0
 URL:		http://bazaar-vcs.org/BzrForeignBranches/Subversion
-BuildRequires:	python >= 1:2.4
+BuildRequires:	python >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-libs
@@ -45,4 +45,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README TODO
-%{py_sitescriptdir}/*
+%dir %{py_sitescriptdir}/bzrlib/plugins/svn
+%{py_sitescriptdir}/bzrlib/plugins/svn/*.py[co]
+%dir %{py_sitescriptdir}/bzrlib/plugins/svn/tests
+%{py_sitescriptdir}/bzrlib/plugins/svn/tests/*.py[co]
+%{py_sitescriptdir}/bzr_svn-*.egg-info
