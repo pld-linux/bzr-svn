@@ -1,12 +1,12 @@
 Summary:	Plugin for Bazaar-NG providing Subversion repository access
 Summary(pl.UTF-8):	Wtyczka do Bazaar-NG umożliwiająca dostęp do repozytorium Subversion
 Name:		bzr-svn
-Version:	0.4.7
+Version:	0.4.17
 Release:	1
 License:	GPL v2+
 Group:		Development/Version Control
 Source0:	http://samba.org/~jelmer/bzr/%{name}-%{version}.tar.gz
-# Source0-md5:	fa3824ff6483647f031256f6f35eec97
+# Source0-md5:	e9c38b9179b542c9c51e7565e707ad64
 URL:		http://bazaar-vcs.org/BzrForeignBranches/Subversion
 BuildRequires:	python >= 1:2.5
 BuildRequires:	rpm-pythonprov
