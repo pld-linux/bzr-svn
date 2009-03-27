@@ -1,12 +1,12 @@
 Summary:	Plugin for Bazaar-NG providing Subversion repository access
 Summary(pl.UTF-8):	Wtyczka do Bazaar-NG umożliwiająca dostęp do repozytorium Subversion
 Name:		bzr-svn
-Version:	0.4.17
+Version:	0.5.3
 Release:	1
 License:	GPL v2+
 Group:		Development/Version Control
 Source0:	http://samba.org/~jelmer/bzr/%{name}-%{version}.tar.gz
-# Source0-md5:	e9c38b9179b542c9c51e7565e707ad64
+# Source0-md5:	2ec2ec5be5fa1500955d9c5963884b6b
 URL:		http://bazaar-vcs.org/BzrForeignBranches/Subversion
 BuildRequires:	python >= 1:2.5
 BuildRequires:	rpm-pythonprov
@@ -48,6 +48,18 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS NEWS README TODO
 %dir %{py_sitedir}/bzrlib/plugins/svn
 %{py_sitedir}/bzrlib/plugins/svn/*.py[co]
+%dir %{py_sitedir}/bzrlib/plugins/svn/cache
+%{py_sitedir}/bzrlib/plugins/svn/cache/*.py[co]
+%dir %{py_sitedir}/bzrlib/plugins/svn/foreign
+%{py_sitedir}/bzrlib/plugins/svn/foreign/*.py[co]
+%dir %{py_sitedir}/bzrlib/plugins/svn/layout
+%{py_sitedir}/bzrlib/plugins/svn/layout/*.py[co]
+%dir %{py_sitedir}/bzrlib/plugins/svn/mapping3
+%{py_sitedir}/bzrlib/plugins/svn/mapping3/*.py[co]
 %dir %{py_sitedir}/bzrlib/plugins/svn/tests
 %{py_sitedir}/bzrlib/plugins/svn/tests/*.py[co]
+%dir %{py_sitedir}/bzrlib/plugins/svn/tests/mapping3
+%{py_sitedir}/bzrlib/plugins/svn/tests/mapping3/*.py[co]
+%dir %{py_sitedir}/bzrlib/plugins/svn/tests/mapping_implementations
+%{py_sitedir}/bzrlib/plugins/svn/tests/mapping_implementations/*.py[co]
 %{py_sitedir}/bzr_svn-*.egg-info
