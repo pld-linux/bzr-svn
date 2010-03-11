@@ -1,19 +1,20 @@
 Summary:	Plugin for Bazaar-NG providing Subversion repository access
 Summary(pl.UTF-8):	Wtyczka do Bazaar-NG umożliwiająca dostęp do repozytorium Subversion
 Name:		bzr-svn
-Version:	0.5.3
+Version:	1.0.2
 Release:	1
 License:	GPL v2+
 Group:		Development/Version Control
 Source0:	http://samba.org/~jelmer/bzr/%{name}-%{version}.tar.gz
-# Source0-md5:	2ec2ec5be5fa1500955d9c5963884b6b
+# Source0-md5:	8408420491a46c0db54749b14491368a
 URL:		http://bazaar-vcs.org/BzrForeignBranches/Subversion
 BuildRequires:	python >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-libs
-Requires:	bzr >= 0.13
-Requires:	python-subversion >= 1.4.4-2
+Requires:	bzr >= 2.0
+Requires:	python-subvertpy
+Suggests:	bzr-rebase
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,8 +51,6 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/bzrlib/plugins/svn/*.py[co]
 %dir %{py_sitedir}/bzrlib/plugins/svn/cache
 %{py_sitedir}/bzrlib/plugins/svn/cache/*.py[co]
-%dir %{py_sitedir}/bzrlib/plugins/svn/foreign
-%{py_sitedir}/bzrlib/plugins/svn/foreign/*.py[co]
 %dir %{py_sitedir}/bzrlib/plugins/svn/layout
 %{py_sitedir}/bzrlib/plugins/svn/layout/*.py[co]
 %dir %{py_sitedir}/bzrlib/plugins/svn/mapping3
