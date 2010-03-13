@@ -9,6 +9,7 @@ Source0:	http://samba.org/~jelmer/bzr/%{name}-%{version}.tar.gz
 # Source0-md5:	8408420491a46c0db54749b14491368a
 URL:		http://bazaar-vcs.org/BzrForeignBranches/Subversion
 BuildRequires:	python >= 1:2.5
+BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-libs
