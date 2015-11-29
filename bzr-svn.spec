@@ -11,7 +11,7 @@ URL:		http://bazaar-vcs.org/BzrForeignBranches/Subversion
 BuildRequires:	python >= 1:2.5
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 %pyrequires_eq	python-libs
 Requires:	bzr >= 2.2
 Requires:	python-subvertpy
